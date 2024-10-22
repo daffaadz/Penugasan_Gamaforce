@@ -40,6 +40,10 @@ else:
 # Menamakan windows
 cv2.namedWindow("Sigma deteksi", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("Sigma deteksi", 700, 400)
+
+# Menyimpan hasil
+cv2.imwrite("Hasil_Sigma.png", image)
+
 # Tampilkan hasil
 cv2.imshow("Sigma deteksi", image)
 cv2.waitKey(0)
