@@ -23,21 +23,19 @@ random.shuffle(combined)
 images_path, masks_path = zip(*combined)
 
 # Menampilkan 6 gambar (3 dari 'images_path' dan 3 dari 'masks_path')
-plt.figure(figsize=(7, 7))
+plt.figure(figsize=(7, 4))
 
 for i in range(3):
     # Menampilkan gambar dari 'images_path'
     img = Image.open(images_path[i])
     plt.subplot(2, 3, i + 1)
     plt.imshow(img)
-    plt.title(f"Sigma {i+1}")
     plt.axis('off')
     
     # Menampilkan gambar dari 'masks_path'
     mask = Image.open(masks_path[i])
     plt.subplot(2, 3, i + 4)
     plt.imshow(mask, cmap='gray')
-    plt.title(f"Mewing {i+1}")
     plt.axis('off')
 
 plt.show()

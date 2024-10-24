@@ -19,7 +19,7 @@ jarak_horizontal = vPesawat * waktu_jatuh
 xPesawat = xTarget - jarak_horizontal
 
 # Output hasil
-print(f"Kecepatan pesawat: {vPesawat:.2f} m/s")
+print(f"\nKecepatan pesawat: {vPesawat:.2f} m/s")
 print(f"Ketinggian pesawat: {hPesawat:.2f} m")
 print(f"Posisi manusia: {xTarget:.2f} m")
 print(f"Posisi pesawat: {xPesawat:.2f} m")

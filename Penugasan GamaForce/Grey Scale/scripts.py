@@ -8,6 +8,8 @@ center = size // 2
 # Buat gambar grayscale dengan semua pixel bernilai 0
 image = np.zeros((size, size), dtype=np.uint8)
 
+maks = np.sqrt(())
+
 # Looping untuk setiap pixel
 for i in range(size):
     for j in range(size):
