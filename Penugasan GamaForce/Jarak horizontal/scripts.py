@@ -6,9 +6,10 @@ def time(height):
     return waktu
 
 # Input variabel yang diperlukan
-vPesawat = float(input("Kecepatan : "))
-hPesawat = float(input("Ketinggian : "))
-xTarget = float(input("Posisi manusia : "))
+vPesawat = float(input("Kecepatan (m/s) : "))
+hPesawat = float(input("Ketinggian (m): "))
+xPesawat1 = float(input("Posisi pesawat saat ini: "))
+xTarget = float(input("Posisi manusia/target : "))
 
 waktu_jatuh = time(hPesawat)
 
@@ -16,11 +17,11 @@ waktu_jatuh = time(hPesawat)
 jarak_horizontal = vPesawat * waktu_jatuh
 
 # Hitung posisi pesawat
-xPesawat = xTarget - jarak_horizontal
+xPesawat2 = xTarget - jarak_horizontal
+
+# Selisih posisi pesawat mula2 dan sesudah
+selisih = xPesawat2 - xPesawat1
 
 # Output hasil
-print(f"\nKecepatan pesawat: {vPesawat:.2f} m/s")
-print(f"Ketinggian pesawat: {hPesawat:.2f} m")
-print(f"Posisi manusia: {xTarget:.2f} m")
-print(f"Posisi pesawat: {xPesawat:.2f} m")
-print(f"Jarak horizontal: {jarak_horizontal:.2f} m")
+print(f"\nPaket dapat dijatuhkan setelah pesawat menempuh jarak: {selisih:.2f} m")
+

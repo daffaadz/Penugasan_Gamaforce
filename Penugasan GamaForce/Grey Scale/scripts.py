@@ -8,16 +8,14 @@ center = size // 2
 # Buat gambar grayscale dengan semua pixel bernilai 0
 image = np.zeros((size, size), dtype=np.uint8)
 
-maks = np.sqrt(())
-
 # Looping untuk setiap pixel
 for i in range(size):
     for j in range(size):
         # Hitung jarak dari pixel (i, j) ke pusat gambar (127, 127)
         distance = np.sqrt((i - center) ** 2 + (j - center) ** 2)
         
-        # Set nilai pixel sesuai dengan jarak (dibatasi hingga 255)
-        image[i, j] = min(255, int(distance))
+        # Set nilai pixel sesuai dengan jarak
+        image[i, j] = max(0, int(distance))
 
 # Tampilkan gambar menggunakan OpenCV
 cv2.imshow('Grayscale Image', image)
